@@ -62,5 +62,12 @@
       }
     }
   ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Batyukovstudio\\BatMedia\\BatMediaServiceProvider"
+      ]
+    }
+  },
   "minimum-stability": "dev"
 }

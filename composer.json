@@ -1,0 +1,66 @@
+{
+  "name": "batyukovstudio/bat-media-panel",
+  "description": "Bat media filament panel",
+  "license": "MIT",
+  "keywords": [
+    "bat",
+    "media",
+    "laravel",
+    "filament"
+  ],
+  "authors": [
+    {
+      "name": "batyukovstudio.com",
+      "email": "batyukovstudio@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Batyukovstudio\\BatMedia\\Filament\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.2",
+    "intervention/image-laravel": "^1.3",
+    "filament/filament": "^3.2",
+    "filament/spatie-laravel-media-library-plugin":"^3.2",
+    "batyukovstudio/bat-media": "dev-main",
+    "batyukovstudio/bat-media-components": "dev-main"
+  },
+  "repositories": [
+    {
+      "name": "batyukovstudio/bat-media",
+      "version": "1.0-dev",
+      "type": "vcs",
+      "prefer-stable": true,
+      "url": "https://github.com/batyukovstudio/bat-media.git",
+      "dist": {
+        "url": "https://github.com/batyukovstudio/bat-media",
+        "type": "git"
+      },
+      "autoload": {
+        "psr-4": {
+          "Batyukovstudio\\BatMedia\\Filament\\": "src/"
+        }
+      }
+    },
+    {
+      "name": "batyukovstudio/bat-media-components",
+      "version": "1.0-dev",
+      "type": "vcs",
+      "prefer-stable": true,
+      "url": "https://github.com/batyukovstudio/bat-media-components.git",
+      "dist": {
+        "url": "https://github.com/batyukovstudio/batyukovstudio/bat-media-components",
+        "type": "git"
+      },
+      "autoload": {
+        "psr-4": {
+          "Batyukovstudio\\BatMedia\\Filament\\": "src/"
+
+        }
+      }
+    }
+  ],
+  "minimum-stability": "dev"
+}

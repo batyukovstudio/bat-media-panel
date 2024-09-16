@@ -5,7 +5,7 @@ namespace Batyukovstudio\BatMedia\Filament;
 use Illuminate\Support\ServiceProvider;
 
 
-class BatMediaServiceProvider extends ServiceProvider
+class BatMediaFilamentServiceProvider extends ServiceProvider
 {
     public array $serviceProviders = [
         // InternalServiceProviderExample::class,

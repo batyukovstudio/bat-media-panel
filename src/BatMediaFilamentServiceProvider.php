@@ -17,11 +17,12 @@ class BatMediaFilamentServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        $this->registerPublishing();
     }
 
     public function register(): void
     {
+        $this->registerPublishing();
+
         parent::register();
     }
     protected function registerPublishing()

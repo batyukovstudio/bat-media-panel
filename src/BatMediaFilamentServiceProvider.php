@@ -17,14 +17,21 @@ class BatMediaFilamentServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        $this->publishes([
-            __DIR__.'/Filament/Components' => 'app/Filament/Components',
-        ], 'bat-components');
+        $this->registerPublishing();
     }
 
     public function register(): void
     {
         parent::register();
+    }
+    protected function registerPublishing()
+    {
+        if ($this->app->runningInConsole()) {
+
+            $this->publishes([
+                __DIR__.'/Filament' => 'app/Filament',
+            ], 'bat-components');
+        }
     }
 
 }

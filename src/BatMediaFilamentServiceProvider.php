@@ -29,7 +29,7 @@ class BatMediaFilamentServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
 
             $this->publishes([
-                __DIR__.'/Filament' => 'app/Filament',
+                __DIR__.'/Filament' => app_path('Filament'),
             ], 'bat-components');
         }
     }

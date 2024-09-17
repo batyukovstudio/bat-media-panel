@@ -1,6 +1,7 @@
 {
   "name": "batyukovstudio/bat-media-panel",
   "description": "Bat media filament panel",
+  "version": "1.0.0",
   "license": "MIT",
   "keywords": [
     "bat",
@@ -26,12 +27,12 @@
     "filament/filament": "^3.2",
     "filament/spatie-laravel-media-library-plugin":"^3.2",
     "batyukovstudio/bat-media": "*",
-    "batyukovstudio/bat-media-components": "*"
+    "batyukovstudio/filament-components": "*"
   },
   "repositories": [
     {
       "name": "batyukovstudio/bat-media",
-      "version": "1.0-dev",
+      "version": "1.0.0",
       "type": "vcs",
       "prefer-stable": true,
       "url": "https://github.com/batyukovstudio/bat-media.git",
@@ -46,13 +47,13 @@
       }
     },
     {
-      "name": "batyukovstudio/bat-media-components",
-      "version": "1.0-dev",
+      "name": "batyukovstudio/filament-components",
+      "version": "1.0.0",
       "type": "vcs",
       "prefer-stable": true,
-      "url": "https://github.com/batyukovstudio/bat-media-components.git",
+      "url": "https://github.com/batyukovstudio/filament-components.git",
       "dist": {
-        "url": "https://github.com/batyukovstudio/bat-media-components",
+        "url": "https://github.com/batyukovstudio/filament-components",
         "type": "git"
       },
       "autoload": {

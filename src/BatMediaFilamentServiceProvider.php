@@ -30,8 +30,10 @@ class BatMediaFilamentServiceProvider extends ServiceProvider
     {
 
             $this->publishes([
-                __DIR__.'/Filament' => './app/Filament',
-            ], 'bat-components');
+                __DIR__.'/Filament/Resources' => './app/Filament/Resources',
+                __DIR__.'/Filament/Components/Models' => './app/Filament/Components/Models',
+                __DIR__.'/Filament/Traits' => './app/Filament/Traits',
+            ], 'bat-panel');
         }
 
 }

@@ -2,7 +2,9 @@
 
 namespace Batyukovstudio\BatMedia;
 
+use Batyukovstudio\BatMedia\Commands\InstallCommand;
 use Illuminate\Support\ServiceProvider;
+use Spatie\LaravelPackageTools\Package;
 
 
 class BatMediaFilamentServiceProvider extends ServiceProvider
@@ -35,5 +37,4 @@ class BatMediaFilamentServiceProvider extends ServiceProvider
                 __DIR__.'/Filament/Resources' => './app/Filament/Resources',
             ], 'bat-panel');
         }
-
 }

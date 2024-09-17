@@ -51,7 +51,7 @@
       "prefer-stable": true,
       "url": "https://github.com/batyukovstudio/bat-media-components.git",
       "dist": {
-        "url": "https://github.com/batyukovstudio/batyukovstudio/bat-media-components",
+        "url": "https://github.com/batyukovstudio/bat-media-components",
         "type": "git"
       },
       "autoload": {

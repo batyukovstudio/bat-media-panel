@@ -1,6 +1,6 @@
 <?php
 
-namespace Batyukovstudio\BatMedia\Filament;
+namespace Batyukovstudio\BatMedia;
 
 use Illuminate\Support\ServiceProvider;
 

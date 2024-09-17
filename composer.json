@@ -65,7 +65,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Batyukovstudio\\BatMedia\\Filament\\BatMediaFilamentServiceProvider"
+        "Batyukovstudio\\BatMedia\\BatMediaFilamentServiceProvider"
       ]
     }
   },

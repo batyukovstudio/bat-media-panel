@@ -53,7 +53,6 @@ class MediaConversionSizeResource extends Resource
 
     public static function table(Table $table): Table
     {
-
         return $table
             ->columns(Media::tableColumnsMediaConversionSize())
             ->filters([

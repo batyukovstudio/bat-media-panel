@@ -50,44 +50,43 @@ class Media
 
     public static function tableColumnsMediaConversion(): array
     {
-        return Arr::collapse([
-            TableComponent::idAndNameTableComponents(),
-            [
-                TextColumn::make('media_entity_id')
-                    ->label('Сущность')
-                    ->formatStateUsing(fn(MediaEntityConversion $record) => $record->getMediaEntity()->getName())
-                    ->searchable()
-                    ->toggleable(),
-                TextColumn::make('width')
-                    ->label('Ширина')
-                    ->searchable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('height')
-                    ->label('Высота')
-                    ->searchable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('quality')
-                    ->label('Качество')
-                    ->searchable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('format')
-                    ->label('Формат')
-                    ->searchable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('queued')
-                    ->label('В очереди')
-                    ->searchable()
-                    ->formatStateUsing(function (MediaEntityConversion $record): string {
-                        if ($record->isQueued() === false) {
-                            $message = 'Нет';
-                        } else {
-                            $message = 'Да';
-                        }
-                        return $message;
-                    })
-                    ->toggleable(),
-            ]
-        ]);
+        return [
+            TableComponent::idTableComponent(),
+            TableComponent::nameTableComponent(),
+            TextColumn::make('media_entity_id')
+                ->label('Сущность')
+                ->formatStateUsing(fn(MediaEntityConversion $record) => $record->getMediaEntity()->getName())
+                ->searchable()
+                ->toggleable(),
+            TextColumn::make('width')
+                ->label('Ширина')
+                ->searchable()
+                ->toggleable(isToggledHiddenByDefault: true),
+            TextColumn::make('height')
+                ->label('Высота')
+                ->searchable()
+                ->toggleable(isToggledHiddenByDefault: true),
+            TextColumn::make('quality')
+                ->label('Качество')
+                ->searchable()
+                ->toggleable(isToggledHiddenByDefault: true),
+            TextColumn::make('format')
+                ->label('Формат')
+                ->searchable()
+                ->toggleable(isToggledHiddenByDefault: true),
+            TextColumn::make('queued')
+                ->label('В очереди')
+                ->searchable()
+                ->formatStateUsing(function (MediaEntityConversion $record): string {
+                    if ($record->isQueued() === false) {
+                        $message = 'Нет';
+                    } else {
+                        $message = 'Да';
+                    }
+                    return $message;
+                })
+                ->toggleable()
+        ];
     }
 
     public static function formSchemaMediaConversionSize(): array

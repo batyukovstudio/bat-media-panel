@@ -20,7 +20,6 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Enums\FiltersLayout;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 
@@ -83,9 +82,10 @@ class MediaEntityResource extends Resource
 
     public static function table(Table $table): Table
     {
-        $tableColumns = Arr::collapse([
-            TableComponent::idAndNameTableComponents(),
-            [
+        return $table
+            ->columns([
+                TableComponent::idTableComponent(),
+                TableComponent::nameTableComponent(),
                 TextColumn::make('entity_class')
                     ->label('Класс сущности')
                     ->searchable()
@@ -118,11 +118,7 @@ class MediaEntityResource extends Resource
                         return $message;
                     })
                     ->toggleable(),
-            ]
-        ]);
-
-        return $table
-            ->columns($tableColumns)
+            ])
             ->filters([
                 SelectFilter::make('id')
                     ->label('Сущность')

@@ -2,11 +2,9 @@
 
 namespace Batyukovstudio\BatMedia;
 
+use Batyukovstudio\BatMedia\Filament\Resources;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
-use Batyukovstudio\BatMedia\Filament\Resources;
-use Batyukovstudio\BatMedia\Filament\Components;
-use Batyukovstudio\BatMedia\Filament\Traits;
 
 class BatMediaPlugin implements Plugin
 {

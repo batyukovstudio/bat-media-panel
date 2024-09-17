@@ -28,12 +28,10 @@ class BatMediaFilamentServiceProvider extends ServiceProvider
     }
     protected function registerPublishing()
     {
-        if ($this->app->runningInConsole()) {
 
             $this->publishes([
                 __DIR__.'Filament/Resources' => './app/Filament/Resources',
             ], 'bat-components');
         }
-    }
 
 }

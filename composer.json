@@ -26,8 +26,8 @@
     "intervention/image-laravel": "^1.3",
     "filament/filament": "^3.2",
     "filament/spatie-laravel-media-library-plugin":"^3.2",
-    "batyukovstudio/bat-media": "1.*",
-    "batyukovstudio/filament-components": "1.*"
+    "batyukovstudio/bat-media": "1",
+    "batyukovstudio/filament-components": "1"
   },
   "repositories": [
   ],
